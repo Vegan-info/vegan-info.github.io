@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block; }
+
+body {
+  margin: 0;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #ffffff;
+  text-align: left;
+  background-color: #0e2d12; }
+
+main {
+    display: block;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important; }
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+.main-content .map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../IMG/map.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 1920px;
+    max-height: 1080px;
+}
+
+.main-content .overlay {
+    position: absolute;
+    top: -100px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: none;
+    background-color: #0e2d12;
+    background-color: rgba(14,45,18,0.9);
+    background-image: url(../IMG/logo-eff.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.main-content .overlay .pins {
+    position: absolute;
+    background-image: url(../IMG/pins.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-content .overlay .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 180px 10px 0 0;
+    width: 300px;
+    background-image: url(../IMG/logo.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: -90px 0px 0px -145px;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 600;
+    color: #b0e1b7;
+}
+
+.main-content .overlay .soon {
+    position: absolute;
+    bottom: 50px;
+    padding: 20px;
+    padding-right: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 300;
+    color: #70a43a;
+    background: none;
+    background-color: #0e2d12;
+    background-color: rgba(14,45,18,0.6);
+}
