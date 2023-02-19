@@ -1,23 +1,23 @@
 @font-face {
     font-family: 'Merriweather';
-    src: url('fonts/merriweather-regular-webfont.eot');
-    src: url('fonts/merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/merriweather-regular-webfont.woff2') format('woff2'),
-         url('fonts/merriweather-regular-webfont.woff') format('woff'),
-         url('fonts/merriweather-regular-webfont.ttf') format('truetype'),
-         url('fonts/merriweather-regular-webfont.svg#merriweatherregular') format('svg');
+    src: url('../fonts/merriweather-regular-webfont.eot');
+    src: url('../fonts/merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-regular-webfont.woff') format('woff'),
+         url('../fonts/merriweather-regular-webfont.ttf') format('truetype'),
+         url('../fonts/merriweather-regular-webfont.svg#merriweatherregular') format('svg');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Woodgrit';
-    src: url('fonts/woodgrit_medium_w00_regular-webfont.eot');
-    src: url('fonts/woodgrit_medium_w00_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/woodgrit_medium_w00_regular-webfont.woff2') format('woff2'),
-         url('fonts/woodgrit_medium_w00_regular-webfont.woff') format('woff'),
-         url('fonts/woodgrit_medium_w00_regular-webfont.ttf') format('truetype'),
-         url('fonts/woodgrit_medium_w00_regular-webfont.svg#woodgritmediumw00-regularRg') format('svg');
+    src: url('../fonts/woodgrit_medium_w00_regular-webfont.eot');
+    src: url('../fonts/woodgrit_medium_w00_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/woodgrit_medium_w00_regular-webfont.woff2') format('woff2'),
+         url('../fonts/woodgrit_medium_w00_regular-webfont.woff') format('woff'),
+         url('../fonts/woodgrit_medium_w00_regular-webfont.ttf') format('truetype'),
+         url('../fonts/woodgrit_medium_w00_regular-webfont.svg#woodgritmediumw00-regularRg') format('svg');
     font-weight: 500;
     font-style: normal;
 }
