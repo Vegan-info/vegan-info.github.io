@@ -21,6 +21,10 @@ var PageView = Backbone.View.extend({
 
   hideLoader: function(){
     alert("hidding loader");
+  },
+
+  load: function(opt){
+    this.model.load(opt);    
   }
     
 });

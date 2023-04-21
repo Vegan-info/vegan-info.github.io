@@ -17,6 +17,11 @@ var Page = Backbone.Model.extend({
   fetch: function(options){
     this.trigger("fetch");
     return Backbone.Model.prototype.fetch.call(this, options);
+  },
+
+  load: function(data){
+    this.set(data);
+    this.fetch();
   }
 
 });

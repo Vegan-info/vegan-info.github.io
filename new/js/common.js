@@ -2,8 +2,7 @@ jQuery(document).ready(function($){
 // document start
 
   
-  var page = new Page();
-  var view = new PageView({model: page});
+  var page = new PageView({model: new Page()});
   
   // Render menu
   var menu = new MenuView({
@@ -18,7 +17,7 @@ jQuery(document).ready(function($){
   });
 
   menu.render();
-  view.render();
+  page.render();
   
 
  // Navbar
