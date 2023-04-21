@@ -1,13 +1,63 @@
 jQuery(document).ready(function($){
 // document start
 
+  var PageModel = Backbone.Model.extend({
+
+    initialize: function(data){
+      this.updateUrl();
+      this.on("change:href", this.updateUrl, this);
+    },
+
+    parse:function(data){
+      this.set("content", data);
+    },
+
+    updateUrl: function(){
+       this.url = window.location.href + "/content/"+this.get("href")+".html";     
+    },
+
+    fetch: function(options){
+      this.trigger("fetch");
+      return Backbone.Model.prototype.fetch.call(this, options);
+    }
+
+  });
+
+
+
+  var PageView = Backbone.View.extend({
+    
+    el: "#page_content",
+
+    initialize:function(){
+      this.model.on("change:content", this.render, this);
+      this.model.on("fetch", this.showLoader, this);
+    },
+  
+    render:function(){
+      this.$el.html(this.model.get("content"));
+      document.title = this.model.get("title");
+      this.hideLoader();
+    },
+
+    showLoader: function(){
+      alert("showing loader...");
+    },
+
+    hideLoader: function(){
+      alert("hidding loader");
+    }
+    
+  });
+
+  
   var MenuItems = Backbone.Collection.extend({
     modelId: function(attrs){
       return attrs.href;      
     }
   });
 
-  
+
   
   
 
@@ -17,21 +67,35 @@ jQuery(document).ready(function($){
     el: "#main-menu",
     template: _.template($("#main-menu-tpl").html()),
     itemTemplate: _.template($("#main-menu-item-tpl").html()),
+
+    initialize: function(opt){
+      this.page = opt.page;
+    },
     
     render: function() {
       this.$el.html(this.template());
       var container = this.$el.find("#main-menu-container");
       var template = this.itemTemplate;
+      var page  = this.page;
       $(this.collection.models).each(function(i, item){
-        container.append(template(item.toJSON()));
+        var el = $(template(item.toJSON()));
+        el.find("a").click(function(){
+          page.set(item);
+          page.fetch();
+        });
+        container.append(el);
       });
-      container.children().first().addClass("current-menu-item");
+      container.children().first().find("a").click();
     }
  });
 
+  var page = new PageModel();
+  var view = new PageView({model: page});
+  
   // Render menu
-  var menuView = new MenuView({ collection
-    : new MenuItems([
+  var menu = new MenuView({
+    page: page,
+    collection: new MenuItems([
         { title: "Why Go Vegan?", href: "why" },
         { title: "Arguments Against Veganism", href: "arguments" },
         { title: "Nutrition & Fitness", href: "contact" },
@@ -40,7 +104,7 @@ jQuery(document).ready(function($){
     ])
   });
 
-  menuView.render();
+  menu.render();
   
 
  // Navbar
