@@ -1,11 +1,53 @@
 jQuery(document).ready(function($){
 // document start
 
+  var MenuItems = Backbone.Collection.extend({
+    modelId: function(attrs){
+      return attrs.href;      
+    }
+  });
+
+  
+  
+  
+
+  // Menu View
+  var MenuView = Backbone.View.extend({
+
+    el: "#main-menu",
+    template: _.template($("#main-menu-tpl").html()),
+    itemTemplate: _.template($("#main-menu-item-tpl").html()),
+    
+    render: function() {
+      this.$el.html(this.template());
+      var container = this.$el.find("#main-menu-container");
+      var template = this.itemTemplate;
+      $(this.collection.models).each(function(i, item){
+        container.append(template(item.toJSON()));
+      });
+      container.children().first().addClass("current-menu-item");
+    }
+ });
+
+  // Render menu
+  var menuView = new MenuView({ collection
+    : new MenuItems([
+        { title: "Why Go Vegan?", href: "why" },
+        { title: "Arguments Against Veganism", href: "arguments" },
+        { title: "Nutrition & Fitness", href: "contact" },
+        { title: "Vegan Shopping", href: "shopping"},
+        // Add more menu items as needed
+    ])
+  });
+
+  menuView.render();
+  
 
  // Navbar
- $( "<span class='clickD'></span>" ).insertAfter(".navbar-nav li.menu-item-has-children > a");
+/*
+  $( "<span class='clickD'></span>" ).insertAfter(".navbar-nav li.menu-item-has-children > a");
  $('.navbar-nav li .clickD').click(function(e) {
-     e.preventDefault();
+   
      var $this = $(this);
      if ($this.next().hasClass('show'))
         {
@@ -20,8 +62,9 @@ jQuery(document).ready(function($){
             $this.toggleClass('toggled');
         }
  });
+*/
 
- $(window).on('resize', function(){
+  /*$(window).on('resize', function(){
      if ($(this).width() < 1025) {
          $('html').click(function(){
              $('.navbar-nav li .clickD').removeClass('toggled');
@@ -39,20 +82,22 @@ jQuery(document).ready(function($){
      }
  });
  // Navbar end
-
+*/
 
  
 /* ===== For menu animation === */
-$(".navbar-toggler").click(function(){
+/*
+  $(".navbar-toggler").click(function(){
     $(".navbar-toggler").toggleClass("open");
     $(".navbar-toggler .stick").toggleClass("open");
     $('body,html' ).toggleClass("open-nav");
 });
 
+*/
 // Navbar end
 
 
-
+/*
 // fixed nav bar
 $(window).scroll(function() {     
     var scroll = $(window).scrollTop();     
@@ -64,7 +109,7 @@ $(window).scroll(function() {
     }
 }) 
 
-
+*/
 
 
 
@@ -166,7 +211,7 @@ $('.slider-nav').slick({
 
 /*testimonial end*/
   
-
+/*
 
 $('#parentVerticalTab').easyResponsiveTabs({
   type: 'vertical', //Types: default, vertical, accordion
@@ -183,7 +228,7 @@ $('#parentVerticalTab').easyResponsiveTabs({
   }
 });
 
-
+*/
 
 
 // document end
