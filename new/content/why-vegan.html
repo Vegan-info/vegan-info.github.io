@@ -228,3 +228,37 @@
     </section>
 <!-- Main end -->
 
+<script type="text/javascript">
+
+$(document).ready(function($){
+ 
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        dots: false,
+        autoplay:true,
+        asNavFor: '.slider-nav'
+    });
+    
+    $('.slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true,
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                centerPadding: '0px',
+                slidesToShow: 1,
+                arrows: true,
+            }
+        }]
+    });
+});
+</script>
+
