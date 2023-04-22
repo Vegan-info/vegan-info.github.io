@@ -10,20 +10,21 @@ var PageView = Backbone.View.extend({
     this.loader = new Loader({el: this.el});
     this.model.on("change:content", this.update, this);
     this.model.on("fetch", this.loader.show, this.loader);
+    this.model.on("fetched", this.loader.hide, this.loader);
   },
   
   render:function(){
     this.loader.render();
+    this.$el.append("<div id='content-container'></div>");
   },
 
   update:function(){
-    this.$el.find(".container").html(this.model.get("content"));  
+    this.$el.find("#content-container").html(this.model.get("content"));  
     document.title = this.model.get("title");
     this.loader.hide();
   },
 
   load: function(opt){
-    //this.loader.show();
     this.model.load(opt);
   }
     

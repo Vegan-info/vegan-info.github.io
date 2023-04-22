@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
   var menu = new MenuView({
     page: page,
     items: new Menu([
-        { title: "Why Go Vegan?", href: "why" },
+        { title: "Why Go Vegan?", href: "why-vegan" },
         { title: "Arguments Against Veganism", href: "arguments" },
         { title: "Nutrition & Fitness", href: "contact" },
         { title: "Vegan Shopping", href: "shopping"},
