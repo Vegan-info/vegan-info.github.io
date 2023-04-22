@@ -2,29 +2,29 @@
 
 var PageView = Backbone.View.extend({
     
-  el: "#page_content",
+  el: "#page-content",
 
   initialize:function(){
-    this.model.on("change:content", this.render, this);
-    this.model.on("fetch", this.showLoader, this);
+
+    _.bindAll(this, 'render');
+    this.loader = new Loader({el: this.el});
+    this.model.on("change:content", this.update, this);
+    this.model.on("fetch", this.loader.show, this.loader);
   },
   
   render:function(){
-    this.$el.html(this.model.get("content"));
+    this.loader.render();
+  },
+
+  update:function(){
+    this.$el.find(".container").html(this.model.get("content"));  
     document.title = this.model.get("title");
-    this.hideLoader();
-  },
-
-  showLoader: function(){
-    alert("showing loader...");
-  },
-
-  hideLoader: function(){
-    alert("hidding loader");
+    this.loader.hide();
   },
 
   load: function(opt){
-    this.model.load(opt);    
+    //this.loader.show();
+    this.model.load(opt);
   }
     
 });

@@ -16,8 +16,9 @@ jQuery(document).ready(function($){
     ])
   });
 
-  menu.render();
   page.render();
+  menu.render();
+//  page.render();
   
 
  // Navbar
