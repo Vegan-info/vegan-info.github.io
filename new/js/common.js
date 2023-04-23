@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
     items: new Menu([
         { title: "Why Go Vegan?", href: "why-vegan" },
         { title: "Arguments Against Veganism", href: "arguments" },
-        { title: "Nutrition & Fitness", href: "contact" },
+        { title: "Nutrition & Fitness", href: "nutrition-fitness" },
         { title: "Vegan Shopping", href: "shopping"},
         // Add more menu items as needed
     ])
@@ -92,7 +92,8 @@ $(window).scroll(function() {
 
 
 /*testimonial*/
-$('.fitness-slider').slick({
+/*
+  $('.fitness-slider').slick({
   dots: false,
   arrows: true,
   slidesToShow: 4,
