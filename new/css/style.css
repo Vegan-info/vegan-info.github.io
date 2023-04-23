@@ -2139,23 +2139,23 @@ h1 {
 
 }
 @media (max-width: 768px) {
-    .resp-accordion.hor_1{
+    .resp-accordion.fit_1{
         padding: 0 !important;
         margin: 0 !important;
         background: transparent !important;
         border: 0 !important;
         position: relative;
     }
-    .resp-accordion.hor_1 .resp-arrow{
+    .resp-accordion.fit_1 .resp-arrow{
         position: absolute;
         right: 10px;
         top: 50%;
         transform: translateY(-50%);
     }
-    .resp-accordion.hor_1.resp-tab-active .tab-nav-outer{
+    .resp-accordion.fit_1.resp-tab-active .tab-nav-outer{
         background-color: #74a639 !important;
     }
-    .resp-accordion.hor_1.resp-tab-active .tab-nav-outer h6{
+    .resp-accordion.fit_1.resp-tab-active .tab-nav-outer h6{
        color: #fff;
     }
 
