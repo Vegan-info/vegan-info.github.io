@@ -15,7 +15,7 @@ var PageView = Backbone.View.extend({
   
   render:function(){
     this.loader.render();
-    this.$el.append("<div id='content-container'></div>");
+    //this.$el.append("<div id='content-container'></div>");
   },
 
   update:function(){
