@@ -11,7 +11,13 @@ var Page = Backbone.Model.extend({
   },
 
   updateUrl: function(){
-    this.url = window.location.href + "/content/"+this.get("href")+".html";     
+    
+    this.url = window.location.protocol+ 
+      "//" + window.location.host+
+      (window.location.pathname.split('/').slice(0, -1).join('/'))+
+      "/content/"+this.get("href")+".html";   
+
+    console.log("new url : ",this.url);
   },
 
   sync: function(method, model, options){
