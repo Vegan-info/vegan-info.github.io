@@ -1,12 +1,12 @@
 jQuery(document).ready(function($){
 // document start
-
   
   var page = new PageView({model: new Page()});
   
   // Render menu
   var menu = new MenuView({
     page: page,
+    router: router,
     items: new Menu([
         { title: "Why Go Vegan?", href: "why-vegan" },
         { title: "Arguments Against Veganism", href: "arguments" },
@@ -17,8 +17,16 @@ jQuery(document).ready(function($){
     ])
   });
 
+  var router = new PageRouter({page: page, menu: menu, defaultPage: "why-vegan"});
+
+  page.bindRouter(router);
+  
+//  var router = new PageRouter({menu: menu, page: page});
+
   page.render();
   menu.render();
+  
+  Backbone.history.start();
 //  page.render();
   
 

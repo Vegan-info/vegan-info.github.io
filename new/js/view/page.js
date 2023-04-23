@@ -26,6 +26,10 @@ var PageView = Backbone.View.extend({
 
   load: function(opt){
     this.model.load(opt);
+  },
+
+  bindRouter: function(router){
+    router = this.model.bindRouter(router);
   }
     
 });

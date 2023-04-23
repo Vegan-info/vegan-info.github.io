@@ -42,6 +42,12 @@ var Page = Backbone.Model.extend({
 
     this.set(data);
     this.fetch();
+    if(this.router) this.router.navigate(data.href, {trigger: false});
+  },
+
+  bindRouter: function(router){
+
+    this.router = router;
   }
 
 });

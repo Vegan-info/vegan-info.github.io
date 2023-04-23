@@ -17,18 +17,24 @@ var MenuView = Backbone.View.extend({
     this.$el.html(this.template());
     var container = this.$el.find("#main-menu-container");
     var template = this.itemTemplate;
-    var page  = this.page;
+    var page = this.page;
     $(this.collection.models).each(function(i, item){
       var el = $(template(item.toJSON()));
-      el.find("a").click(function(){
+      el.find("a").attr("id", item.get("href")).click(function(){
         page.load(item.attributes);
         container.find(".current-menu-item").removeClass("current-menu-item");
         el.addClass("current-menu-item");
       });
       container.append(el);
     });
-    container.children().first().find("a").click();
+    //container.children().first().find("a").click();
+  },
+
+  execute: function(href){
+
+    this.$el.find("#"+href).click();
   }
+  
 });
 
 
