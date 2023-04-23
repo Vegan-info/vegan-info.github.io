@@ -21,9 +21,9 @@ var MenuView = Backbone.View.extend({
     $(this.collection.models).each(function(i, item){
       var el = $(template(item.toJSON()));
       el.find("a").attr("id", item.get("href")).click(function(){
-        page.load(item.attributes);
         container.find(".current-menu-item").removeClass("current-menu-item");
         el.addClass("current-menu-item");
+        page.load(item.attributes);
       });
       container.append(el);
     });
