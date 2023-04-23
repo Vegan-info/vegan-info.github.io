@@ -21,7 +21,6 @@ var PageView = Backbone.View.extend({
   update:function(){
     this.$el.find("#content-container").html(this.model.get("content"));  
     document.title = this.model.get("title");
-    this.loader.hide();
   },
 
   load: function(opt){
