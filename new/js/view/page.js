@@ -14,21 +14,21 @@ var PageView = Backbone.View.extend({
   
   render:function(){
     this.loader.render();
-    //this.$el.append("<div id='content-container'></div>");
+    //this.$el.append("<div id='content-overlay'></div><div id='content-container'><div style='min-height:150vh;width:100%; padding:0; margin:0; background-color:#131712'></div></div>");
   },
 
   update:function(){
     //this.$el.find("#content-container").html(this.model.get("content"));  
 
     var container = this.$el.find("#content-container");
-    var overlay = this.$el.find("#overlay");
+    var overlay = this.$el.find("#content-overlay");
     var model = this.model;
     loader = this.loader;
 
     overlay.fadeIn(200, function(){
       container.html(model.get("content"));
       loader.hideWhenReady(function(){
-        overlay.fadeOut(100);
+        overlay.fadeOut(200);
       });
     })
 
