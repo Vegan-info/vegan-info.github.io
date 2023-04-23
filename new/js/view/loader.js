@@ -47,7 +47,28 @@ var Loader = Backbone.View.extend({
   },
 
   hideWhenReady:function(){
-    $(document).ready(this.hide);   
+
+    var self = this;
+    $(document).ready(function(){
+      //check if images are loaded
+
+      var imgs = $('img');
+      var totalImages = imgs.length;
+      var loadedImages = 0;
+
+      imgs.on('load', function(){
+        loadedImages++;
+        if(loadedImages == totalImages){
+          self.hide();
+        }
+        
+      }).each(function(){
+        if(this.complete||this.error){
+          $(this).trigger("load");
+        }
+      });
+      
+    });   
   }
 
   
