@@ -14,8 +14,8 @@ var PageRouter = Backbone.Router.extend({
   },
 
   load: function(path){
-    path = path.split("|")[0];
-    if(this.menu) this.menu.execute(path||this.defaultPage);
+    path = path ? path.split("|")[0] : this.defaultPage;
+    if(this.menu) this.menu.execute(path);
     else this.page.load(path);
   },
   
