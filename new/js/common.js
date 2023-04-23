@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
         { title: "Arguments Against Veganism", href: "arguments" },
         { title: "Nutrition & Fitness", href: "nutrition-fitness" },
         { title: "Vegan Shopping", href: "shopping"},
-        { title: "Eating Out & Restaurants", href: "restaurants"}
+        //{ title: "Eating Out & Restaurants", href: "restaurants"}
         // Add more menu items as needed
     ])
   });
