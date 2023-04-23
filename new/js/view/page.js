@@ -10,7 +10,6 @@ var PageView = Backbone.View.extend({
     this.loader = new Loader({el: this.el});
     this.model.on("change:content", this.update, this);
     this.model.on("fetch", this.loader.show, this.loader);
-    this.model.on("fetched", this.loader.hideWhenReady, this.loader);
   },
   
   render:function(){
@@ -19,7 +18,20 @@ var PageView = Backbone.View.extend({
   },
 
   update:function(){
-    this.$el.find("#content-container").html(this.model.get("content"));  
+    //this.$el.find("#content-container").html(this.model.get("content"));  
+
+    var container = this.$el.find("#content-container");
+    var overlay = this.$el.find("#overlay");
+    var model = this.model;
+    loader = this.loader;
+
+    overlay.fadeIn(200, function(){
+      container.html(model.get("content"));
+      loader.hideWhenReady(function(){
+        overlay.fadeOut(100);
+      });
+    })
+
     document.title = this.model.get("title");
   },
 

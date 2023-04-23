@@ -46,7 +46,7 @@ var Loader = Backbone.View.extend({
     this.spinner.stop();
   },
 
-  hideWhenReady:function(){
+  hideWhenReady:function(callback){
 
     var self = this;
     $(document).ready(function(){
@@ -59,9 +59,8 @@ var Loader = Backbone.View.extend({
       imgs.on('load', function(){
         loadedImages++;
         if(loadedImages == totalImages){
-          setTimeout(function(){
-            self.hide();
-          },500);
+          self.hide();
+          if(callback) callback();
         }
         
       }).each(function(){
