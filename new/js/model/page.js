@@ -31,8 +31,8 @@ var Page = Backbone.Model.extend({
     
     options = options || {};
     
-    options.success = function(model){
-      model.trigger("fetched");
+    options.success = function(model, content){
+      model.trigger("fetched");      
     };
     
     return Backbone.Model.prototype.fetch.call(this, options);
@@ -40,9 +40,12 @@ var Page = Backbone.Model.extend({
 
   load: function(data){
 
-    this.set(data);
-    this.fetch();
-    if(this.router) this.router.navigate(data.href, {trigger: false});
+    if(data.href != this.get("href")){
+      
+      this.set(data);
+      this.fetch();
+      if(this.router) this.router.navigate(data.href, {trigger: false});
+    }
   },
 
   bindRouter: function(router){
