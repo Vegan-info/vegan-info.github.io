@@ -5,6 +5,8 @@ var Loader = Backbone.View.extend({
 
   initialize: function(){
 
+    _.bindAll(this, 'hide', 'show');
+
     var spinOpt = {
 
       lines: 13,
@@ -42,6 +44,10 @@ var Loader = Backbone.View.extend({
 
   hide:function(){
     this.spinner.stop();
+  },
+
+  hideWhenReady:function(){
+    $(document).ready(this.hide);   
   }
 
   

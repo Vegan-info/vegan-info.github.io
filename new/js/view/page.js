@@ -10,7 +10,7 @@ var PageView = Backbone.View.extend({
     this.loader = new Loader({el: this.el});
     this.model.on("change:content", this.update, this);
     this.model.on("fetch", this.loader.show, this.loader);
-    this.model.on("fetched", this.loader.hide, this.loader);
+    this.model.on("fetched", this.loader.hideWhenReady, this.loader);
   },
   
   render:function(){
