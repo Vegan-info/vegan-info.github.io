@@ -1,11 +1,13 @@
 jQuery(document).ready(function($){
 // document start
-  
-  var page = new PageView({model: new Page()});
-  
+ 
+  var page = new Page();
+
+  var router = new PageRouter({page: page, defaultPage: "why-vegan"});
+    
   // Render menu
   var menu = new MenuView({
-    page: page,
+//    page: page,
     router: router,
     items: new Menu([
         { title: "Why Go Vegan?", href: "why-vegan" },
@@ -17,17 +19,20 @@ jQuery(document).ready(function($){
     ])
   });
 
-  var router = new PageRouter({page: page, menu: menu, defaultPage: "why-vegan"});
-
-  page.bindRouter(router);
+  var view = new PageView({model: page});
   
-//  var router = new PageRouter({menu: menu, page: page});
+  //var router = new PageRouter({menu: menu, page: page});
 
-  page.render();
+  view.render();
   menu.render();
 
+
   Backbone.history.stop();
-  Backbone.history.start({pushState: true});
+  Backbone.history.start({pushState: true, root:"/new/"});
+  /*setTimeout(function(){
+      alert(Backbone.history.getFragment());
+      //menu.change((Backbone.history.getFragment()||"why-vegan"), true);
+  },1000)*/
 //  page.render();
   
 

@@ -12,12 +12,10 @@ var Page = Backbone.Model.extend({
 
   updateUrl: function(){
     
-    this.url = window.location.protocol+ 
-      "//" + window.location.host+
+    this.url = window.location.protocol+ "//" + window.location.host+
       (window.location.pathname.split('/').slice(0, -1).join('/'))+
-      "/content/"+this.get("href")+".html";   
+      "/content/"+this.get("href")+".html";
 
-    console.log("new url : ",this.url);
   },
 
   sync: function(method, model, options){
@@ -40,18 +38,16 @@ var Page = Backbone.Model.extend({
 
   load: function(data){
 
-    if(data.href != this.get("href")){
-      
+    if(typeof data !== 'object'){
+      data = {href: data};
+    }
+
+    if(data.href != this.get("href")){  
       this.set(data);
       this.fetch();
-      if(this.router) this.router.navigate(data.href, {trigger: false});
     }
-  },
-
-  bindRouter: function(router){
-
-    this.router = router;
   }
+
 
 });
 

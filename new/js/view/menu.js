@@ -9,31 +9,43 @@ var MenuView = Backbone.View.extend({
   itemTemplate: _.template($("#main-menu-item-tpl").html()),
 
   initialize: function(opt){
-    this.page = opt.page;
+    this.router = opt.router;
     this.collection = opt.items;
   },
     
   render: function() {
+    var self = this;
     this.$el.html(this.template());
     var container = this.$el.find("#main-menu-container");
     var template = this.itemTemplate;
-    var page = this.page;
+    var router = this.router;
+    
     $(this.collection.models).each(function(i, item){
       var el = $(template(item.toJSON()));
       el.find("a").attr("id", item.get("href")).click(function(){
         container.find(".current-menu-item").removeClass("current-menu-item");
         el.addClass("current-menu-item");
-        page.load(item.attributes);
+        router.navigate(item.get("href"), {trigger:true});
+        document.title = item.get("title");
       });
       container.append(el);
     });
-    //container.children().first().find("a").click();
+
+    var current = this.router.page.get("href");
+    if(current){
+      container.find("#"+current).parent().addClass("current-menu-item");
+    }else{
+      this.router.page.once("change:href", function(model, value){
+        container.find("#"+value).parent().addClass("current-menu-item");
+      });
+    }
+    
   },
 
   execute: function(href){
-
     this.$el.find("#"+href).click();
-  }
+  },
+
   
 });
 

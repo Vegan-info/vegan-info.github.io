@@ -32,7 +32,6 @@ var PageView = Backbone.View.extend({
       });
     })
 
-    document.title = this.model.get("title");
   },
 
   load: function(opt){
