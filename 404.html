@@ -7,8 +7,15 @@
         <script type="text/javascript">
             (function(){
                 var path = window.location.pathname;
+                //var path  = "/new/why-vegan#parentVerticalTab2";
                 var root = "/new/";
-                window.location.href = root;
+                path = path.replace(root, "").replace("#","|");
+                if(path[0]=='/'){
+                    path = path.substr(1);
+                }
+                var url = root+"#"+path;
+                
+                window.location.href = url;
             })();
         </script>
     </head>
