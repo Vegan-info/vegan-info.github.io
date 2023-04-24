@@ -25,8 +25,9 @@ jQuery(document).ready(function($){
 
   page.render();
   menu.render();
-  
-  Backbone.history.start();
+
+  Backbone.history.stop();
+  Backbone.history.start({pushState: true});
 //  page.render();
   
 
