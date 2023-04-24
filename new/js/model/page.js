@@ -23,6 +23,17 @@ var Page = Backbone.Model.extend({
     options.dataType = 'text';
     return Backbone.sync.call(this, method, model, options);
   },
+
+  getHref: function(callback){
+    var href = this.get("href");
+    if(href){
+      callback(href);
+    }else {
+      this.once("change:href",function(model, value){
+        callback(value);
+      });
+    }
+  },
   
   fetch: function(options){
     this.trigger("fetch");

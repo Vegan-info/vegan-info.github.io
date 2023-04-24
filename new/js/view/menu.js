@@ -31,14 +31,9 @@ var MenuView = Backbone.View.extend({
       container.append(el);
     });
 
-    var current = this.router.page.get("href");
-    if(current){
-      container.find("#"+current).parent().addClass("current-menu-item");
-    }else{
-      this.router.page.once("change:href", function(model, value){
-        container.find("#"+value).parent().addClass("current-menu-item");
-      });
-    }
+    this.router.page.getHref(function(href){
+      container.find("#"+href).parent().addClass("current-menu-item");
+    })
     
   },
 
