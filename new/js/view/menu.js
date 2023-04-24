@@ -27,6 +27,7 @@ var MenuView = Backbone.View.extend({
         el.addClass("current-menu-item");
         router.navigate(item.get("href"), {trigger:true});
         document.title = item.get("title");
+        self.closeWindow();
       });
       container.append(el);
     });
@@ -37,7 +38,11 @@ var MenuView = Backbone.View.extend({
     
   },
 
-  execute: function(href){
+  closeWindow:function(){
+    this.$el.find(".navbar-collapse.show").removeClass("show");
+  },
+  
+   execute: function(href){
     this.$el.find("#"+href).click();
   },
 
