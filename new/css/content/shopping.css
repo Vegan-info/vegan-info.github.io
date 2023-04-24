@@ -1,0 +1,217 @@
+.nutrition-sec4 {
+    background-color: #f9fbee;
+    padding: 150px 0 200px 0;
+    margin-top: -85px;
+  }
+.nutrition-sec4 h2{
+    font-size: 90px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+}
+.nutrition-sec4 p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.slider-box{
+    position: relative;
+}
+.slider-box .thumb{
+    position: relative;
+    margin-bottom: 15px;
+}
+.slider-box .thumb img{
+    width: 100%;
+}
+.slider-box .thumb .thumb-hvr{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+.slider-box .thumb .thumb-hvr:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    background: url(images/fitness-ovarlay.png) center center no-repeat;
+    background-size: cover;
+    opacity: 0.600;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+.slider-box:hover .thumb .thumb-hvr{
+    opacity: 1;
+}
+.slider-box h4{
+    text-transform: uppercase;
+}
+.slick-arrow{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.slick-arrow:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: url(images/left-arrow.png) center center no-repeat;
+    background-size: 100%;
+    z-index: 999;
+}
+.slick-next:before{
+    background: url(images/right-arow.png) center center no-repeat;
+    background-size: 100%;
+}
+.slick-prev {
+    left: -70px;
+}
+.slick-next {
+    right: -45px;
+}
+.shopping-sec2 .s1-left {
+    padding-right: 47px;
+  }
+  .shopping-sec2 .nutrition-sec4{
+    background-color: transparent;
+  }
+  .shopping-sec2 .nutrition-sec4 .slider-box .thumb{
+    border: 2px solid #fff;
+    filter: drop-shadow(0px 2px 8px rgba(2,19,16,0.08));
+  }
+  .shopping-sec2 .nutrition-sec4 .slider-box h4{
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  .shopping-sec2 .nutrition-sec4 .slider-box p{
+    text-align: left;
+  }
+.shopping-sec3{
+    position: relative;
+    z-index: 1;
+}
+.shopping-sec3:after{
+    content:'';
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.3785889355742297) 0%, rgba(0,0,0,0) 100%);
+    z-index: -1;
+ }
+
+
+
+
+
+
+
+
+/* =====body css end===== */
+/* =====Responsive===== */
+@media screen and (max-width: 1699px) {
+     .shopping-sec2 .nutrition-sec4 .slider-box h4 {
+        font-size: 35px;
+      }
+     .nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2 {
+        font-size: 65px;
+      }
+     .nutrition-sec4 h2 {
+        font-size: 65px;
+      }
+}
+
+@media(max-width:1199px) {
+     .sec3.nutrition-sec3 h2 {
+        font-size: 53px;
+      }
+     .nutrition-sec4 {
+        padding: 150px 0 100px 0;
+      }
+     .shopping-sec2 .nutrition-sec4{
+        padding: 100px 0 100px 0;
+      }
+}
+@media (max-width: 991px) {
+  .nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2 {
+    font-size: 45px;
+  }
+  .nutrition-sec4 h2 {
+    font-size: 55px;
+  }
+  .sec4.nutrition-sec5 {
+    padding: 125px 0 270px 0;
+    margin-top: -95px;
+    margin-bottom: -95px;
+    }
+    .shopping-sec2 .nutrition-sec4 {
+        padding: 65px 0 40px 0;
+    }
+    .shopping-sec2 .s1-left {
+        padding-right: 15px;
+    }
+}
+@media (max-width: 767px) {
+      .nutrition-sec3{
+        background: url(images/new2.jpg) bottom center no-repeat !important;
+        background-size: cover !important;
+      }
+      .shopping-sec3{
+        background: url(images/new3.jpg) bottom center no-repeat !important;
+        background-size: cover !important;
+        position: relative;
+        z-index: 1;
+      }
+      .shopping-sec3:after{
+        display: none;
+      }
+     .nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2 {
+        font-size: 36px;
+    }
+    .sec2.nutrition-sec2:after {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(100% 0, 100% 95%, 0 100%, 0 0);
+       
+    }
+    .sec2.nutrition-sec2{
+        padding-bottom: 70px;
+        padding-top:70px;
+    }
+    .sec2.nutrition-sec2 .tab-slider {
+        margin-top: 0px;
+    }
+    .sec1.nutrition-sec1 {
+        padding: 30px 0 50px 0;
+    }
+    .sec3.nutrition-sec3 h2 {
+        font-size: 36px;
+    }
+    .nutrition-sec3{
+        margin-top: -65px;
+    }
+    .nutrition-sec4 {
+        padding: 75px 0 60px 0;
+        margin-top: -35px;
+    }
+    .nutrition-sec3.shopping-sec3{
+        margin-top: -75px;
+    }
+}
+
+

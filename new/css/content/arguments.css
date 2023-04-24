@@ -1,0 +1,68 @@
+
+
+
+
+
+
+
+/* =====body css end===== */
+/* =====Responsive===== */
+
+
+/*~~~~~~~~~~~~~~~~~~~~ vegan  Arguments Against Veganism page ~~~~~~~~~~~~~~~~~~*/
+:root{
+
+    --deep-green: #74a639;
+    --white: #fff;
+    --gray-black: #0c0d0c;
+    --gray: #4e514e;
+    --light-gray:#d4dbd4;
+    --Merriweather: 'Merriweather';
+    --Woodgrit: 'Woodgrit';
+}
+/*~~~~~~~~~~~~~~ css ~~~~~~~~~~~~~~~*/
+.cmn-h3 h3{font-size: 38px; line-height: 1.25; color: var(--gray-black); text-transform: uppercase;}
+.against-vegan-lft-sec-txt{max-width: 500px; margin-left: auto;}
+.green-h3 h3, .green-h3 h3 a{color: var(--deep-green);}
+.green-h3 h3 a{display: flex; align-items: center;}
+.green-h3 h3 a img{padding-right: 10px;}
+.dwnload-sec{padding: 30px 0 45px;}
+.vegan-right-sec-txt .cmn-h3 h3{padding-bottom: 40px;}
+.vegan-right-sec-txt{padding: 60px 0; border-bottom: 1px solid var(--light-gray);}
+.vegan-right-sec-txt:first-child{padding-top: 0;}
+.vegan-right-sec-txt:last-child{padding-bottom: 0; border-bottom: none; margin-bottom: 100px;}
+.vegan-right-sec-txt p b{color: var(--gray-black); font-family: var(--Merriweather);}
+.against-vegan-lft-sec{padding-bottom: 30px;}
+
+@media screen and (max-width: 1599px) {
+    .cmn-h3 h3{font-size: 35px;} 
+    .dwnload-sec{padding: 25px 0 30px;}
+    .against-vegan-lft-sec-txt{max-width: 400px; }
+}
+
+@media screen and (max-width: 1399px) {
+    .cmn-h3 h3{font-size: 30px;} 
+    .dwnload-sec{padding: 25px 0 30px;}
+    .vegan-right-sec-txt{padding: 40px 0;}
+    .vegan-right-sec-txt .cmn-h3 h3{padding-bottom: 30px;}
+}
+
+@media screen and (max-width: 1199px) {
+    .cmn-h3 h3{font-size: 26px;} 
+    .dwnload-sec{padding: 20px 0 25px;}
+    .vegan-right-sec-txt{padding: 40px 0;}
+    .vegan-right-sec-txt .cmn-h3 h3{padding-bottom: 30px;}
+    .vegan-right-sec-txt:last-child{ margin-bottom: 60px;}
+    .against-vegan-lft-sec-txt{max-width: 320px; }
+    .green-h3 h3 a img { width: 40px;}
+}
+
+
+@media screen and (max-width: 991px) {
+    .against-vegan-lft-sec-txt{max-width:100%; }
+    .vegan-right-sec-txt:last-child{ margin-bottom: 40px;}
+}
+
+@media screen and (max-width: 390px) {
+    .cmn-h3 h3{font-size: 22px;} 
+}

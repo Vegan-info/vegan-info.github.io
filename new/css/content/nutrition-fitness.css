@@ -1,0 +1,420 @@
+.tab-slider{
+    margin-top: -220px;
+    position: relative;
+    z-index: 2;
+}
+.nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2{
+    font-size: 90px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.nutritionbox1 .thumb{
+    width: 100%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+}
+.nutritionbox1 .thumb img{
+    width: 100%;
+    min-height: 480px;
+    max-height: 480px;
+    object-fit: cover;
+}
+.nutritionbox1 h4{
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.nutritionbox1 p{
+    color: #fff;
+}
+.inline-link{
+    text-decoration: underline !important;
+    color: #74a639;
+}
+.nutrition-sec5{
+    text-align: left;
+}
+.coching-srvc-box{
+    filter: drop-shadow(0px 2px 8px rgba(2,19,16,0.08));
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+.coching-srvc-box .thumb{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.coching-srvc-box .thumb img{
+    width: 100%;
+}
+.coching-srvc-box h3{
+    color: #000;
+    font-size: 38px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.coching-srvc-box p{
+    max-width: 560px;
+    margin: 0 auto 30px auto;
+}
+.coching-srvc-box h4{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.coching-srvc-box .cmn-list{
+    text-align: left;
+}
+.coching-srvc-box .cmn-btn:after{
+    display: none;
+}
+.coching-srvc-box .cmn-btn{
+    background-color: transparent;
+    border: 2px solid #74a639;
+    color: #74a639;
+}
+.coching-srvc-box .cmn-btn:hover{
+    color: #fff;
+    background-color: #74a639;
+}
+.nutrition-sec4 {
+    background-color: #f9fbee;
+    padding: 150px 0 200px 0;
+    margin-top: -85px;
+  }
+.nutrition-sec4 h2{
+    font-size: 90px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+}
+.nutrition-sec4 p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.slider-box{
+    position: relative;
+}
+.slider-box .thumb{
+    position: relative;
+    margin-bottom: 15px;
+}
+.slider-box .thumb img{
+    width: 100%;
+}
+.slider-box .thumb .thumb-hvr{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+.slider-box .thumb .thumb-hvr:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    background: url(images/fitness-ovarlay.png) center center no-repeat;
+    background-size: cover;
+    opacity: 0.600;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+.slider-box:hover .thumb .thumb-hvr{
+    opacity: 1;
+}
+.slider-box h4{
+    text-transform: uppercase;
+}
+.fitness-slider .slick-slide{
+    padding: 0 15px;
+}
+.fitness-slider .slick-track{
+    margin: 0 -15px;
+}
+.slick-arrow{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.slick-arrow:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: url(images/left-arrow.png) center center no-repeat;
+    background-size: 100%;
+    z-index: 999;
+}
+.slick-next:before{
+    background: url(images/right-arow.png) center center no-repeat;
+    background-size: 100%;
+}
+.slick-prev {
+    left: -70px;
+}
+.slick-next {
+    right: -45px;
+}
+
+.nutrition-sec4{
+    background-color: transparent;
+  }
+ .nutrition-sec4 .slider-box .thumb{
+    border: 2px solid #fff;
+    filter: drop-shadow(0px 2px 8px rgba(2,19,16,0.08));
+  }
+  .nutrition-sec4 .slider-box h4{
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  .nutrition-sec4 .slider-box p{
+    text-align: left;
+  }
+
+ .resp-tab-item{
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    border: 0px !important;
+    width: 100%;
+ }
+ .tab-nav-outer{
+    display: flex !important;
+    align-items: center;
+    background-color: transparent !important;
+    border: 1px solid #74a639 !important;
+    width: 100%;
+ }
+ .resp-vtabs li.resp-tab-active .tab-nav-outer{
+    border: 1px solid #74a639 !important;
+    background-color: #74a639 !important;
+}
+ .resp-vtabs ul.resp-tabs-list{
+    max-width: 390px;
+    width: 100% !important;
+ }
+ .resp-vtabs .resp-tabs-list li{
+    padding: 0 !important;
+ }
+ .resp-vtabs .resp-tabs-list li:not(:last-child){
+    margin-bottom: 10px !important;
+ }
+ .tab-nav-outer img{
+    width: 70px;
+    height: 67px;
+ }
+ .tab-nav-outer h6{
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 68px;
+    text-transform: uppercase;
+    color: #74a639;
+    font-weight: 500;
+    font-family: "Woodgrit";
+    width: calc(100% - 70px);
+    padding-left: 30px;
+    padding-right: 10px;
+}
+.resp-vtabs li.resp-tab-active {
+    border: 1px solid #74a639 !important;
+    background-color: #74a639 !important;
+}
+.resp-vtabs li.resp-tab-active h6{
+    color: #fff;
+}
+.resp-tab-content{
+    padding: 0 !important;
+    border: 0px !important;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+.resp-vtabs .resp-tabs-container {
+    border: 0 !important;
+    width: 100%;
+    border-radius:0px !important;
+}
+
+
+/* =====body css end===== */
+/* =====Responsive===== */
+@media screen and (max-width: 1699px) {
+     .nutrition-sec1 h2, .nutrition-sec5 h2, .sec3 h2 {
+        font-size: 65px;
+      }
+      .nutritionbox1 .thumb img {
+        min-height: 370px;
+        max-height: 370px;
+      }
+      .nutritionbox1 h4 {
+        font-size: 37px;
+      }
+      .nutrition-sec4 .slider-box h4 {
+        font-size: 35px;
+      }
+      .nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2 {
+        font-size: 65px;
+      }
+      .logo{
+        max-width: 112px;
+      }
+      .nutrition-sec4 h2 {
+        font-size: 65px;
+      }
+}
+
+@media(max-width:1199px) {
+     .nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2 {
+        font-size: 58px;
+      }
+      .coching-srvc-box h3 {
+        font-size: 30px;
+      }
+     .nutritionbox1 .thumb img {
+        min-height: 300px;
+        max-height: 300px;
+      }
+      .nutritionbox1 h4 {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+      .sec3.nutrition-sec3 h2 {
+        font-size: 53px;
+      }
+      .fitness-slider{
+        max-width: 870px;
+        margin: 0 auto;
+      }
+      .nutrition-sec4 {
+        padding: 150px 0 100px 0;
+      }
+     .shopping-sec2 .nutrition-sec4{
+        padding: 100px 0 100px 0;
+      }
+}
+
+@media (max-width: 991px) {
+  .nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2 {
+    font-size: 45px;
+  }
+  .nutritionbox1 .thumb img {
+    min-height: 210px;
+    max-height: 210px;
+  }
+  .nutritionbox1 h4 {
+    font-size: 23px;
+  }
+  .nutrition-sec4 h2 {
+    font-size: 55px;
+  }
+  .fitness-slider {
+    max-width: 87%;
+    margin: 0 auto;
+  }
+  .sec4.nutrition-sec5 {
+    padding: 125px 0 270px 0;
+    margin-top: -95px;
+    margin-bottom: -95px;
+    }
+    .shopping-sec2 .nutrition-sec4 {
+        padding: 65px 0 40px 0;
+    }
+    .resp-vtabs ul.resp-tabs-list {
+        max-width: 100%;
+    }
+
+}
+@media (max-width: 768px) {
+    .resp-accordion.fit_1{
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        border: 0 !important;
+        position: relative;
+    }
+    .resp-accordion.fit_1 .resp-arrow{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .resp-accordion.fit_1.resp-tab-active .tab-nav-outer{
+        background-color: #74a639 !important;
+    }
+    .resp-accordion.fit_1.resp-tab-active .tab-nav-outer h6{
+       color: #fff;
+    }
+
+}
+@media (max-width: 767px) {
+     .nutrition-sec3{
+        background: url(images/new2.jpg) bottom center no-repeat !important;
+        background-size: cover !important;
+      }
+      .nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2 {
+        font-size: 36px;
+    }
+    .sec2.nutrition-sec2:after {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(100% 0, 100% 95%, 0 100%, 0 0);
+       
+    }
+    .sec2.nutrition-sec2{
+        padding-bottom: 70px;
+        padding-top:70px;
+    }
+    .sec2.nutrition-sec2 .tab-slider {
+        margin-top: 0px;
+    }
+    .sec1.nutrition-sec1 {
+        padding: 30px 0 50px 0;
+    }
+    .sec3.nutrition-sec3 h2 {
+        font-size: 36px;
+    }
+    .nutrition-sec3{
+        margin-top: -65px;
+    }
+    .nutrition-sec4 {
+        padding: 75px 0 60px 0;
+        margin-top: -35px;
+    }
+    .fitness-slider .slick-track{
+        margin: 0;
+    }
+    .fitness-slider .slick-slide{
+        padding: 0;
+    }
+    .slick-arrow {
+        width: 32px;
+        height: 32px;
+    }
+    .slick-next {
+        right: -15px;
+    }
+    .slick-prev {
+        z-index: 9;
+        left: -15px;
+    }
+    .sec4.nutrition-sec5 {
+        padding: 156px 0 270px 0;
+        margin-top: -115px;
+        margin-bottom: -142px;
+    }
+    .nutrition-sec3.shopping-sec3{
+        margin-top: -75px;
+    }
+}
+
