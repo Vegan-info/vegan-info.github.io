@@ -54,7 +54,7 @@
     letter-spacing: 1px;
     line-height: 40px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #fff;
     font-weight: 500;
     font-family: "Woodgrit";
 }
@@ -205,7 +205,7 @@
       .sec3 {
         padding: 100px 0 500px 0;
         margin-top: -55px;
-        background: url(images/new1.png) bottom center no-repeat !important;
+        background: url(../../images/new1.png) bottom center no-repeat !important;
         background-size: cover !important;
       }
      .s4-content h2 {
