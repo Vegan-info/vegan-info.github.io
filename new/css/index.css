@@ -25,12 +25,12 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('merriweather-bold-webfont.eot');
-    src: url('merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('merriweather-bold-webfont.woff2') format('woff2'),
-         url('merriweather-bold-webfont.woff') format('woff'),
-         url('merriweather-bold-webfont.ttf') format('truetype'),
-         url('merriweather-bold-webfont.svg#merriweatherbold') format('svg');
+    src: url('../fonts/merriweather-bold-webfont.eot');
+    src: url('../fonts/merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-bold-webfont.woff') format('woff'),
+         url('../fonts/merriweather-bold-webfont.ttf') format('truetype'),
+         url('../fonts/merriweather-bold-webfont.svg#merriweatherbold') format('svg');
     font-weight: 700;
     font-style: normal;
 
@@ -489,7 +489,7 @@ font-family: "Merriweather";
     position: absolute;
     left: 0;
     top: 2px;
-    background: url(images/tick.png) center center no-repeat;
+    background: url(../images/tick.png) center center no-repeat;
 }
 .cmn-list2 li:after{
     content: '';
@@ -644,7 +644,7 @@ background-color: #74a639;
         top: 17px;
         width: 20px;
         height: 20px;
-        background: url(images/sort-down.svg) center center no-repeat;
+        background: url(../images/sort-down.svg) center center no-repeat;
         display: block;
         background-size: 10px;
         cursor: pointer;

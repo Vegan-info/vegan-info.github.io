@@ -153,12 +153,12 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    background: url(images/left-arrow.png) center center no-repeat;
+    background: url(../../images/left-arrow.png) center center no-repeat;
     background-size: 100%;
     z-index: 999;
 }
 .slick-next:before{
-    background: url(images/right-arow.png) center center no-repeat;
+    background: url(../../images/right-arow.png) center center no-repeat;
     background-size: 100%;
 }
 .slick-prev {
@@ -359,7 +359,7 @@
 }
 @media (max-width: 767px) {
      .nutrition-sec3{
-        background: url(images/new2.jpg) bottom center no-repeat !important;
+        background: url(../../images/new2.jpg) bottom center no-repeat !important;
         background-size: cover !important;
       }
       .nutrition-sec1 h2, .nutrition-sec5 h2, .eating-sec1 h2, .eating-sec2 h2 {

@@ -14,12 +14,12 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    background: url(images/left-arrow.png) center center no-repeat;
+    background: url(../../images/left-arrow.png) center center no-repeat;
     background-size: 100%;
     z-index: 999;
 }
 .slick-next:before{
-    background: url(images/right-arow.png) center center no-repeat;
+    background: url(../../images/right-arow.png) center center no-repeat;
     background-size: 100%;
 }
 .slick-prev {
