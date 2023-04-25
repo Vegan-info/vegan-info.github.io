@@ -28,7 +28,7 @@ var PageView = Backbone.View.extend({
     overlay.fadeIn(500, function(){
       container.html(model.get("content"));
       loader.hideWhenReady(function(){
-        overlay.fadeOut(500);
+        overlay.fadeOut(1000);
       });
     })
 
