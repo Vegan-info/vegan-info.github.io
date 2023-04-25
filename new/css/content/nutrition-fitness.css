@@ -124,7 +124,7 @@
     position: absolute;
     left: 0;
     top: 0px;
-    background: url(images/fitness-ovarlay.png) center center no-repeat;
+    background: url(../../images/fitness-ovarlay.png) center center no-repeat;
     background-size: cover;
     opacity: 0.600;
     z-index: -1;
