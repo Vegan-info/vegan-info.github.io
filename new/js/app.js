@@ -13,8 +13,9 @@ jQuery(document).ready(function($){
         { title: "Why Go Vegan?", href: "why-vegan" },
         { title: "Arguments Against Veganism", href: "arguments" },
         { title: "Nutrition & Fitness", href: "nutrition-fitness" },
-        { title: "Vegan Shopping", href: "shopping"},
-        { title: "Eating Out & Restaurants", href: "restaurants"}
+        { title: "Groceries", href: "shopping"},
+        { title: "Clothes & Shoes", href: "clothes"},
+        { title: "Restaurants", href: "restaurants"},
         // Add more menu items as needed
     ])
   });
